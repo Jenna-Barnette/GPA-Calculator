@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>GPA Calculator</title>
+<meta name="author" content="barnettej5">
+<link rel="stylesheet" href="GPA_CSS.css">
+</head>
+<body>
+
+<h1>GPA Calculator</h1>
+
+<div id="GPA_info">
+<form action="submit">
+<table>
+  <thead>
+    <tr>
+      <th><label for="semester">Semester</label></th>
+      <th><label for="year">Year</label></th>
+      <th><label for="class_name">Class Name</label></th>
+      <th><label for="credit_hours">Credit Hours</label></th>
+      <th><label for="grade">Grade</label></th>
+      <th>Remove Class</th>
+    </tr>
+  </thead>
+  <tbody id="input_container">
+    <tr id="user_input">
+      <td><input required id="semester" type="text" placeholder="Fall, Spring, Summer"></td>
+      <td><input required id="year" type="number" step="1" min="2000" max="9999" placeholder="Year"></td>
+      <td><input required id="class_name" type="text" placeholder="Class Name"></td>
+      <td><input required id="credit_hours" type="number" step="1" min="0" max="99" placeholder="CH"></td>
+      <td><input required id="grade" type="text" placeholder="Ex: A, A-, B+, B, B-"></td>
+      <td><button type="button" onclick="remove_class(this)">Remove</button></td>
+    </tr>
+  </tbody>
+</table>
+  <button id="submit" type="submit">Submit</button>
+  <button onclick="add_class()">Add Class</button>
+</form>
+</div>
+
+<div id="Final_calculation">
+<table>
+    <thead>
+        <tr>
+        <th colspan="2">Final Calculation</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+          <td>Credit Hours</td>
+          <td id="final_ch">1</td>
+        </tr>
+         <tr>
+          <td>GPA Points</td>
+          <td id="final_gpap">1</td>
+        </tr>
+         <tr>
+          <td>Active Credit Hours</td>
+          <td id="final_active_ch">1</td>
+        </tr>
+         <tr>
+          <td id="final_gpa">Current GPA</td>
+          <td>1</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
+
+
+
+
+<a href="https://validator.w3.org/#validate_by_input" target="_blank">W3C Validator</a>
+<script src="GPA_js.js"></script>
+</body>
+</html>
