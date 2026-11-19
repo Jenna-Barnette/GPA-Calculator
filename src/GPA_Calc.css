@@ -1,13 +1,154 @@
-table, th, td {
-    border: 2px solid black;
+:root {
+    --winthrop-red: #660000;
+    --winthrop-bright-red: #8f1d1d;
+    --winthrop-gold: #f2b824;
+    --winthrop-cream: #fffaf0;
 }
 
-h1 {
+.App {
+    width: min(1120px, calc(100% - 32px));
+    min-height: calc(100vh - 64px);
+    margin: 32px auto;
+    padding: 32px;
+    box-sizing: border-box;
+    background: var(--winthrop-cream);
+    border: 1px solid rgba(102, 0, 0, 0.12);
+    border-top: 8px solid var(--winthrop-gold);
+    border-radius: 12px;
+    box-shadow: 0 16px 40px rgba(52, 20, 20, 0.16);
+}
+
+.App h1 {
+    margin: 0 0 28px;
+    color: var(--winthrop-red);
     text-align: center;
+    font-size: 38px;
+    letter-spacing: -0.5px;
 }
 
 #GPA_info {
     display: block;
+}
+
+#GPA_info form {
+    width: 100%;
+}
+
+#GPA_info table,
+#Final_calculation table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    overflow: hidden;
+    background: #fff;
+    border: 1px solid #dccca7;
+    border-radius: 10px;
+}
+
+#GPA_info th,
+#GPA_info td,
+#Final_calculation th,
+#Final_calculation td {
+    border: 0;
+    border-right: 1px solid #eadcc1;
+    border-bottom: 1px solid #eadcc1;
+    padding: 10px;
+}
+
+#GPA_info tr:last-child td,
+#Final_calculation tr:last-child td {
+    border-bottom: 0;
+}
+
+#GPA_info th:last-child,
+#GPA_info td:last-child,
+#Final_calculation th:last-child,
+#Final_calculation td:last-child {
+    border-right: 0;
+}
+
+#GPA_info th,
+#Final_calculation th {
+    background: var(--winthrop-red);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+}
+
+#GPA_info td {
+    background: #fff;
+    text-align: center;
+}
+
+#GPA_info input {
+    width: 100%;
+    min-height: 44px;
+    box-sizing: border-box;
+    border: 1px solid #cfc09d;
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: #fff;
+    color: #2d2622;
+    font-size: 15px;
+    outline: none;
+}
+
+#GPA_info input::placeholder {
+    color: #817868;
+    opacity: 1;
+}
+
+#GPA_info input:focus {
+    border-color: var(--winthrop-gold);
+    box-shadow: 0 0 0 3px rgba(242, 184, 36, 0.25);
+}
+
+.App button {
+    min-height: 44px;
+    border: 1px solid var(--winthrop-red);
+    border-radius: 7px;
+    padding: 9px 18px;
+    background: var(--winthrop-red);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.App button:hover {
+    background: var(--winthrop-bright-red);
+}
+
+.App button:focus-visible {
+    outline: 3px solid rgba(242, 184, 36, 0.6);
+    outline-offset: 2px;
+}
+
+#GPA_info td button {
+    width: 100%;
+    min-height: 44px;
+    padding: 8px 10px;
+    background: #fff;
+    color: var(--winthrop-red);
+}
+
+#GPA_info td button:hover {
+    background: #fff4df;
+}
+
+#GPA_info form > button {
+    margin: 18px 8px 0 0;
+}
+
+#GPA_info form > button[type="button"] {
+    background: var(--winthrop-gold);
+    border-color: #d99c0a;
+    color: #402600;
+}
+
+#GPA_info form > button[type="button"]:hover {
+    background: #ffd45b;
 }
 
 #Final_calculation {
